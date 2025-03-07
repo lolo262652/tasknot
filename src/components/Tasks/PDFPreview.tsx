@@ -4,8 +4,8 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
-// Configuration du worker PDF.js
-pdfjs.GlobalWorkerOptions.workerSrc = '/pdf-worker/pdf.worker.min.js';
+// Configuration du worker PDF.js avec un chemin CDN comme fallback
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 interface PDFPreviewProps {
   url: string;
